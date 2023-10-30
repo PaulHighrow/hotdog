@@ -1,0 +1,100 @@
+import { VideoBox, VideoLimiter } from 'components/AboutUs/AboutUs.styled';
+import { CloseIcon } from 'components/LeadForm/LeadForm.styled';
+import { LeadBtn } from 'components/Menu/Menu.styled';
+import ReactPlayer from 'react-player/lazy';
+import {
+  Details,
+  DetailsLink,
+  MarqueeBackdrop,
+  MarqueeCloseBtn,
+  ModalDesc,
+  ModalHeader,
+  ModalWindow,
+} from './MarqueeModal.styled';
+
+const serviceList = [
+  {
+    title: 'Вивчення англійської',
+    to: '/english',
+    videoUrl: 'https://youtu.be/Sagg08DrO5U?si=FAeZdQ2Zz9ksXsrt',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In distinctio minima laborum. Recusandae similique deleniti nesciunt cupiditate perferendis corrupti alias minima obcaecati! Saepe, facilis ipsam.',
+  },
+  {
+    title: 'Вивчення німецької',
+    to: '/deutsch',
+    videoUrl: 'https://youtu.be/Sagg08DrO5U?si=FAeZdQ2Zz9ksXsrt',
+    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur labore odio repellat? Officia tempora ducimus, obcaecati, sapiente quos, adipisci cupiditate repellendus neque asperiores nulla dolorem.',
+  },
+  {
+    title: 'Вивчення польської',
+    to: '/polski',
+    videoUrl: 'https://youtu.be/Sagg08DrO5U?si=FAeZdQ2Zz9ksXsrt',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio et, consectetur eos maiores corrupti quaerat alias facilis fugiat laudantium accusantium quibusdam, aperiam pariatur fuga aspernatur.',
+  },
+  {
+    title: 'Навчальний центр',
+    to: '/education',
+    videoUrl: 'https://youtu.be/Sagg08DrO5U?si=FAeZdQ2Zz9ksXsrt',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque accusamus aliquam quae, quis quasi labore maiores eveniet accusantium dicta quam beatae qui eius, esse facilis.',
+  },
+  {
+    title: 'Перекладацьке бюро',
+    to: '/translation',
+    videoUrl: 'https://youtu.be/Sagg08DrO5U?si=FAeZdQ2Zz9ksXsrt',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deserunt, labore aut eveniet, iure impedit ipsum rem dignissimos nesciunt quis illum consequatur. Voluptatibus delectus nulla dicta inventore vero provident aspernatur!',
+  },
+  {
+    title: 'Екзаменаційний центр',
+    to: '/examination',
+    videoUrl: 'https://youtu.be/Sagg08DrO5U?si=FAeZdQ2Zz9ksXsrt',
+    desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus libero, facere hic repellendus commodi dolore impedit, porro error vel exercitationem minus sed architecto amet eum inventore dolorum ratione. Possimus, rerum. Assumenda ipsum earum qui eos, sequi molestias natus neque, ipsam non eum aliquid voluptatibus voluptas alias, cumque expedita eligendi temporibus!',
+  },
+];
+
+export const MarqueeModal = ({ closeMarqueeModal, toggleModal, id }) => {
+  const toggleLeadForm = () => {
+    toggleModal();
+    closeMarqueeModal();
+  };
+
+  const allowScroll = () => {
+    document.body.style.overflowY = '';
+  };
+
+  return (
+    <>
+      <MarqueeBackdrop onClick={closeMarqueeModal} />
+      <ModalWindow>
+        <MarqueeCloseBtn onClick={closeMarqueeModal}>
+          <CloseIcon />
+        </MarqueeCloseBtn>
+        <ModalHeader>{serviceList[id].title}</ModalHeader>
+
+        <VideoLimiter>
+          <VideoBox>
+            <ReactPlayer
+              playing={true}
+              loop={true}
+              controls={true}
+              style={{
+                display: 'block',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+              }}
+              width="100%"
+              height="100%"
+              url={serviceList[id].videoUrl}
+            />
+          </VideoBox>
+        </VideoLimiter>
+
+        <ModalDesc>{serviceList[id].desc}</ModalDesc>
+        <DetailsLink to={serviceList[id].to}>
+          <Details onClick={allowScroll}>Детальніше</Details>
+        </DetailsLink>
+        <LeadBtn onClick={toggleLeadForm}> ШВИДКА КОНСУЛЬТАЦІЯ </LeadBtn>
+      </ModalWindow>
+    </>
+  );
+};

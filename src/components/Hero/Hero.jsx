@@ -5,17 +5,17 @@ import {
   Description,
   DescriptionMoreText,
   DescriptionTrigger,
-  DescriptionUnderlineShort,
   DescriptionUnderlineLong,
+  DescriptionUnderlineShort,
   HeroSection,
+  HeroVector,
   SubTitle,
   Title,
   TitleSketch,
-  HeroVector,
 } from './Hero.styled';
 import { HeroMarquee } from './HeroMarquee/HeroMarquee';
 
-export const Hero = ({ closeModal, toggleModal }) => {
+export const Hero = ({ toggleModal }) => {
   const [isMore, setIsMore] = useState(false);
   const [isSketchHidden, setIsSketchHidden] = useState(true);
   const [isSubtitleHidden, setIsSubtitleHidden] = useState(true);

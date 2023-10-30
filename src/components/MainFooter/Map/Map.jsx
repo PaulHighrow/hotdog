@@ -12,15 +12,15 @@ export const Map = () => {
 
   const center = useMemo(
     () => ({
-      lat: 49.84037940597361,
-      lng: 24.03317568650616,
+      lat: 49.842132433846984,
+      lng: 24.040286925051372,
     }),
     []
   );
 
   const marker = {
-    lat: 49.84024706452136,
-    lng: 24.033143712286236,
+    lat: 49.842132433846984,
+    lng: 24.040286925051372,
   };
 
   const { isLoaded } = useJsApiLoader({
@@ -35,13 +35,13 @@ export const Map = () => {
         <GoogleMap
           mapContainerClassName="map-container"
           center={center}
-          zoom={17}
+          zoom={18}
         >
-          <MarkerF position={marker} title="AP Education Center">
+          <MarkerF position={marker} title="Hot Dog Grooming">
             <InfoWindow position={marker}>
               <Location>
-                <LocationName>AP Education Center</LocationName>{' '}
-                <LocationAdress>вул. Братів Рогатинців, 18</LocationAdress>
+                <LocationName>Hot Dog Grooming</LocationName>{' '}
+                <LocationAdress>вул. В. Короленка, 2</LocationAdress>
               </Location>
             </InfoWindow>
           </MarkerF>

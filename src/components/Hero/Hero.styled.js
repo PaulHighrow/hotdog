@@ -31,7 +31,7 @@ export const Title = styled.h1`
 
   width: 280px;
   color: var(--main-color);
-  font-family: var(--title-font-family);
+  font-family: var(--page-title-font-family);
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 2px;

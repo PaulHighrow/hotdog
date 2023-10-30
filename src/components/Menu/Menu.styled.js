@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { ReactComponent as MenuDownArrow } from '../../img/svg/invertedDownArrow.svg';
-import { ReactComponent as LogoIcon } from '../../img/svg/invertedLogo.svg';
+import { ReactComponent as LogoIcon } from '../../img/svg/logo.svg';
 
 import sketchOutline from 'img/svg/sketchOutline.svg';
 import { Link } from 'react-router-dom';
@@ -97,7 +97,7 @@ export const LogoRoute = styled(Link)`
 
 export const Logo = styled(LogoIcon)`
   z-index: 10;
-  width: 43px;
+  width: 61px;
   display: block;
   flex-shrink: 0;
   height: 100%;
@@ -109,11 +109,11 @@ export const Logo = styled(LogoIcon)`
   }
 
   @media screen and (min-width: 768px) {
-    width: 58px;
+    width: 98px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 72px;
+    width: 100px;
   }
 `;
 

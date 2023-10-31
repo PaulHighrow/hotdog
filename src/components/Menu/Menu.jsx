@@ -1,7 +1,7 @@
 import useSize from '@react-hook/size';
 import { Navigation } from 'components/Navigation/Navigation';
 import { useEffect, useRef, useState } from 'react';
-import { ReactComponent as LoginIcon } from '../../img/svg/invertedLoginIcon.svg';
+
 import {
   Header,
   HeaderText,
@@ -13,6 +13,7 @@ import {
   MobileMenuIcon,
   NavContainer,
   PlatformLink,
+  ShopButtonIcon,
 } from './Menu.styled';
 
 export const Menu = ({ toggleModal }) => {
@@ -55,12 +56,10 @@ export const Menu = ({ toggleModal }) => {
             <HeaderText>МЕНЮ</HeaderText> <MobileMenuIcon />
           </MobileMenuBtn>
         </HeaderWrapper>
-        {width >= 768 && (
-          <LeadBtn onClick={toggleModal}> ШВИДКА КОНСУЛЬТАЦІЯ </LeadBtn>
-        )}
+        {width >= 768 && <LeadBtn onClick={toggleModal}> ЗАПИСАТИСЬ </LeadBtn>}
         {width >= 768 && (
           <PlatformLink href="https://online.ap.education/" target="_blank">
-            <HeaderText>УВІЙТИ</HeaderText> <LoginIcon />
+            <HeaderText>HOT DOG SHOP</HeaderText> <ShopButtonIcon />
           </PlatformLink>
         )}
       </Header>

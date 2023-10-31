@@ -3,6 +3,7 @@ import { ReactComponent as TitleSketchSVG } from '../../img/svg/sketchTitle.svg'
 import { ReactComponent as UnderlineShort } from '../../img/svg/hero-underline-short.svg';
 import { ReactComponent as UnderlineLong } from '../../img/svg/hero-underline-long.svg';
 import { ReactComponent as HeroSVG } from '../../img/svg/hero-caveat.svg';
+import { ReactComponent as TitleSVG } from '../../img/svg/hero.svg';
 
 export const HeroSection = styled.section`
   position: relative;
@@ -23,7 +24,40 @@ export const HeroSection = styled.section`
   }
 `;
 
-export const HeroTextWrapper = styled.div``;
+export const HeroTitleWrapper = styled.div`
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+`;
+
+export const HeroTitle = styled(TitleSVG)`
+  margin: 0 auto;
+  width: 300px;
+  height: 80px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 648px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 794px;
+  }
+`;
+
+export const HeroText = styled.span`
+  text-align: center;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+`;
 
 export const Title = styled.h1`
   position: relative;

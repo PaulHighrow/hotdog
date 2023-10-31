@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
-import { ReactComponent as MenuDownArrow } from '../../img/svg/invertedDownArrow.svg';
+import { ReactComponent as MenuDownArrow } from '../../img/svg/downArrow.svg';
 import { ReactComponent as LogoIcon } from '../../img/svg/logo.svg';
+import { ReactComponent as ShopIcon } from '../../img/svg/shopIcon.svg';
 
 import sketchOutline from 'img/svg/sketchOutline.svg';
 import { Link } from 'react-router-dom';
@@ -82,13 +83,18 @@ export const MobileMenuBtn = styled.button`
 `;
 
 export const MobileMenuIcon = styled(MenuDownArrow)`
-  color: var(--main-color);
+  color: var(--accent-color);
   flex-shrink: 0;
   stroke-width: 1;
 
   @media screen and (min-width: 768px) {
     stroke-width: 2;
   }
+`;
+
+export const ShopButtonIcon = styled(ShopIcon)`
+  width: 28px;
+  height: 28px;
 `;
 
 export const LogoRoute = styled(Link)`
@@ -149,8 +155,9 @@ export const LeadBtn = styled.button`
   border: none;
   /* border: 2px solid #fff; */
   border-radius: 47px;
+  font-family: var(--title-font-family);
   background-color: var(--secondary-color);
-  color: var(--main-color);
+  color: var(--accent-color);
   text-align: center;
   position: relative;
   outline: transparent;
@@ -211,7 +218,7 @@ export const HeaderText = styled.span`
   line-height: 1.45;
 
   margin-right: 8px;
-  color: var(--main-color);
+  color: var(--accent-color);
 
   @media screen and (min-width: 768px) {
     font-weight: 600;

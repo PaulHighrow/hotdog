@@ -1,7 +1,11 @@
 import useSize from '@react-hook/size';
-import { HeaderText, LeadBtn, PlatformLink } from 'components/Menu/Menu.styled';
+import {
+  HeaderText,
+  LeadBtn,
+  PlatformLink,
+  ShopButtonIcon,
+} from 'components/Menu/Menu.styled';
 import { useState } from 'react';
-import { ReactComponent as LoginIcon } from '../../img/svg/invertedLoginIcon.svg';
 import {
   MenuButtonsWrapper,
   NavigationItem,
@@ -43,9 +47,9 @@ export const Navigation = ({ toggleMenu, toggleModal, className }) => {
         {width < 768 && (
           <>
             <PlatformLink href="https://online.ap.education/" target="_blank">
-              <HeaderText>УВІЙТИ</HeaderText> <LoginIcon />
+              <HeaderText>HOT DOG SHOP</HeaderText> <ShopButtonIcon />
             </PlatformLink>
-            <LeadBtn onClick={handleNavBtn}> ШВИДКА КОНСУЛЬТАЦІЯ </LeadBtn>
+            <LeadBtn onClick={handleNavBtn}> ЗАПИСАТИСЬ </LeadBtn>
           </>
         )}
       </MenuButtonsWrapper>

@@ -12,19 +12,45 @@ import {
   StyledForm,
 } from 'components/LeadForm/LeadForm.styled';
 import { MarqueeCloseBtn } from 'components/MarqueeModal/MarqueeModal.styled';
+import { Loader } from 'components/SharedLayout/Loader/Loader';
 import { Formik } from 'formik';
 import { useState } from 'react';
-import { Loader } from 'components/SharedLayout/Loader/Loader';
 import * as yup from 'yup';
-import { OrderModal } from './TranslationsOrderModal.styled';
+import { OrderModal, StyledSelect } from './TranslationsOrderModal.styled';
 
 export const TranslationsOrderModal = ({ closeOrderModal, utms }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+
+  const services = [
+    { value: 'Комплексний догляд', label: 'Комплексний догляд' },
+    { value: 'Гігієнічний догляд', label: 'Гігієнічний догляд' },
+    { value: 'Експрес линька', label: 'Експрес линька' },
+    { value: 'Тримінг', label: 'Тримінг' },
+    { value: 'Догляд за котами', label: 'Догляд за котами' },
+    { value: 'Догляд за гризунами', label: 'Догляд за гризунами' },
+  ];
+
+  const time = [
+    { value: '10:00', label: '10:00' },
+    { value: '11:00', label: '11:00' },
+    { value: '12:00', label: '12:00' },
+    { value: '13:00', label: '13:00' },
+    { value: '14:00', label: '14:00' },
+    { value: '15:00', label: '15:00' },
+    { value: '16:00', label: '16:00' },
+    { value: '17:00', label: '17:00' },
+    { value: '18:00', label: '18:00' },
+    { value: '19:00', label: '19:00' },
+  ];
 
   const initialValues = {
     name: '',
     phone: '',
-    lang: '',
+    service: '',
+    date: '',
+    time: '',
     utm_content: '',
     utm_medium: '',
     utm_campaign: '',
@@ -56,7 +82,9 @@ export const TranslationsOrderModal = ({ closeOrderModal, utms }) => {
       )
       .min(10, 'Номер телефону має складатися не менше ніж з 10 символів!')
       .max(20, 'Номер телефону має складатися не більше ніж з 20 символів!'),
-    lang: yup.string().required('Будь ласка, оберіть мову зі списку!'),
+    service: yup.string().required('Будь ласка, оберіть послугу зі списку!'),
+    date: yup.string().required('Будь ласка, оберіть валідну дату!'),
+    time: yup.string().required('Будь ласка, оберіть час запису зі списку!'),
     utm_content: yup.string().optional(),
     utm_medium: yup.string().optional(),
     utm_campaign: yup.string().optional(),
@@ -124,13 +152,28 @@ export const TranslationsOrderModal = ({ closeOrderModal, utms }) => {
               <InputNote component="p" name="phone" />
             </Label>
             <Label>
-              <Input component="select" name="lang" placeholder="Мова">
-                <option value="" disabled hidden></option>
-                <option value="Англійська">Англійська</option>
-                <option value="Німецька">Німецька</option>
-                <option value="Польська">Польська</option>
-              </Input>
-              <InputNote component="p" name="lang" />
+              <StyledSelect
+                value={selectedService}
+                onChange={setSelectedService}
+                options={services}
+                placeholder="Послуга"
+                name="service"
+              />
+              <InputNote component="p" name="service" />
+            </Label>
+            <Label>
+              <Input type="date" name="date" placeholder="Дата" />
+              <InputNote component="p" name="date" />
+            </Label>
+            <Label>
+              <StyledSelect
+                value={selectedTime}
+                onChange={setSelectedTime}
+                options={time}
+                placeholder="Час"
+                name="time"
+              />
+              <InputNote component="p" name="time" />
             </Label>
             <HiddenInput type="text" name="utm_content" />
             <HiddenInput type="text" name="utm_medium" />

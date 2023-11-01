@@ -21,6 +21,10 @@ export const StyledForm = styled(Form)`
   margin: 0 auto;
   gap: 36px;
 
+  @media screen and (min-width: 360px) {
+    width: 340px;
+  }
+
   @media screen and (min-width: 768px) {
     width: 640px;
     padding: 50px 20px;
@@ -43,7 +47,7 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   width: 260px;
 
   @media screen and (min-width: 360px) {
@@ -56,9 +60,9 @@ export const Label = styled.label`
 `;
 
 export const Input = styled(Field)`
-  width: 280px;
+  width: 260px;
   padding: 10px 5px;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--main-color);
   -webkit-text-stroke: 0.5px var(--main-color);
   border-color: transparent;
@@ -66,9 +70,11 @@ export const Input = styled(Field)`
 
   @media screen and (min-width: 360px) {
     width: 300px;
+    font-size: 20px;
   }
 
   @media screen and (min-width: 768px) {
+    font-size: 22px;
     width: 500px;
   }
 
@@ -96,15 +102,20 @@ export const Input = styled(Field)`
 
 export const InputNote = styled(ErrorMessage)`
   position: absolute;
-  bottom: -20px;
+  bottom: -16px;
   color: var(--secondary-burnt-color);
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
 
+  @media screen and (min-width: 360px) {
+    bottom: -20px;
+    font-size: 15px;
+  }
+
   @media screen and (min-width: 768px) {
-    bottom: -28px;
-    font-size: 22px;
+    bottom: -24px;
+    font-size: 18px;
   }
 `;
 

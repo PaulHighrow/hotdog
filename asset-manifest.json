@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/hotdog/static/css/main.eec21606.css",
-    "main.js": "/hotdog/static/js/main.7e65f7b2.js",
-    "Homepage.js": "/hotdog/static/js/Homepage.7141f7d9.chunk.js",
-    "Not Found.js": "/hotdog/static/js/Not Found.565e7e02.chunk.js",
+    "main.js": "/hotdog/static/js/main.8ddf41c7.js",
+    "Homepage.js": "/hotdog/static/js/Homepage.50592f94.chunk.js",
+    "Not Found.js": "/hotdog/static/js/Not Found.7b789c0e.chunk.js",
     "reactPlayerYouTube.js": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js",
     "reactPlayerSoundCloud.js": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js",
     "reactPlayerVimeo.js": "/hotdog/static/js/reactPlayerVimeo.299001cc.chunk.js",
@@ -17,7 +17,7 @@
     "reactPlayerKaltura.js": "/hotdog/static/js/reactPlayerKaltura.a3661434.chunk.js",
     "reactPlayerFilePlayer.js": "/hotdog/static/js/reactPlayerFilePlayer.72cf8151.chunk.js",
     "reactPlayerPreview.js": "/hotdog/static/js/reactPlayerPreview.c911d303.chunk.js",
-    "static/js/108.a978a9b9.chunk.js": "/hotdog/static/js/108.a978a9b9.chunk.js",
+    "static/js/213.aac10555.chunk.js": "/hotdog/static/js/213.aac10555.chunk.js",
     "static/media/hero-marquee5large@2x.png": "/hotdog/static/media/hero-marquee5large@2x.643c883925d9c051231f.png",
     "static/media/hero-marquee1large@2x.png": "/hotdog/static/media/hero-marquee1large@2x.655c98b2d3ab1b67aac1.png",
     "static/media/hero-marquee2large@2x.png": "/hotdog/static/media/hero-marquee2large@2x.70370b67a37555d13b34.png",
@@ -174,9 +174,9 @@
     "static/media/loopyLineMirror.svg": "/hotdog/static/media/loopyLineMirror.48ca7bb812c4829298a091b339e31743.svg",
     "static/media/downArrow.svg": "/hotdog/static/media/downArrow.739ad7a445679188e39aa43656b55580.svg",
     "main.eec21606.css.map": "/hotdog/static/css/main.eec21606.css.map",
-    "main.7e65f7b2.js.map": "/hotdog/static/js/main.7e65f7b2.js.map",
-    "Homepage.7141f7d9.chunk.js.map": "/hotdog/static/js/Homepage.7141f7d9.chunk.js.map",
-    "Not Found.565e7e02.chunk.js.map": "/hotdog/static/js/Not Found.565e7e02.chunk.js.map",
+    "main.8ddf41c7.js.map": "/hotdog/static/js/main.8ddf41c7.js.map",
+    "Homepage.50592f94.chunk.js.map": "/hotdog/static/js/Homepage.50592f94.chunk.js.map",
+    "Not Found.7b789c0e.chunk.js.map": "/hotdog/static/js/Not Found.7b789c0e.chunk.js.map",
     "reactPlayerYouTube.831a5c80.chunk.js.map": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js.map",
     "reactPlayerSoundCloud.084f48c9.chunk.js.map": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js.map",
     "reactPlayerVimeo.299001cc.chunk.js.map": "/hotdog/static/js/reactPlayerVimeo.299001cc.chunk.js.map",
@@ -190,10 +190,10 @@
     "reactPlayerKaltura.a3661434.chunk.js.map": "/hotdog/static/js/reactPlayerKaltura.a3661434.chunk.js.map",
     "reactPlayerFilePlayer.72cf8151.chunk.js.map": "/hotdog/static/js/reactPlayerFilePlayer.72cf8151.chunk.js.map",
     "reactPlayerPreview.c911d303.chunk.js.map": "/hotdog/static/js/reactPlayerPreview.c911d303.chunk.js.map",
-    "108.a978a9b9.chunk.js.map": "/hotdog/static/js/108.a978a9b9.chunk.js.map"
+    "213.aac10555.chunk.js.map": "/hotdog/static/js/213.aac10555.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eec21606.css",
-    "static/js/main.7e65f7b2.js"
+    "static/js/main.8ddf41c7.js"
   ]
 }

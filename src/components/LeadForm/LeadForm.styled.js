@@ -64,7 +64,6 @@ export const Input = styled(Field)`
   padding: 10px 5px;
   font-size: 18px;
   color: var(--main-color);
-  -webkit-text-stroke: 0.5px var(--main-color);
   border-color: transparent;
   border-radius: 15px;
 
@@ -90,7 +89,7 @@ export const Input = styled(Field)`
     &:focus {
       font-family: var(--main-font-family);
       -webkit-text-fill-color: var(--main-color);
-      -webkit-box-shadow: 0 0 0px 1000px var(--accent-color) inset;
+      -webkit-box-shadow: 0 0 0px 1000px var(--main-transparent-color) inset;
     }
   }
 

@@ -97,7 +97,7 @@ export const HeroMarquee = ({ toggleModal }) => {
       <StyledMarquee autoFill={true} pauseOnHover={true}>
         <MarqueeChild id={0} onClick={handleToggleModal}>
           <MarqueeOverlay>
-            <MarqueeText>Вивчай англійську</MarqueeText>
+            <MarqueeText>Комплексний догляд</MarqueeText>
           </MarqueeOverlay>
           <MarqueePicture>
             <source
@@ -129,7 +129,7 @@ export const HeroMarquee = ({ toggleModal }) => {
 
         <MarqueeChild id={1} onClick={handleToggleModal}>
           <MarqueeOverlay>
-            <MarqueeText>Вивчай німецьку</MarqueeText>
+            <MarqueeText>Гігієнічний догляд</MarqueeText>
           </MarqueeOverlay>
           <MarqueePicture>
             <source
@@ -161,7 +161,7 @@ export const HeroMarquee = ({ toggleModal }) => {
 
         <MarqueeChild id={2} onClick={handleToggleModal}>
           <MarqueeOverlay>
-            <MarqueeText>Вивчай польську</MarqueeText>
+            <MarqueeText>Експрес лінька</MarqueeText>
           </MarqueeOverlay>
           <MarqueePicture>
             <source
@@ -193,7 +193,7 @@ export const HeroMarquee = ({ toggleModal }) => {
 
         <MarqueeChild id={3} onClick={handleToggleModal}>
           <MarqueeOverlay>
-            <MarqueeText>Навчальний центр</MarqueeText>
+            <MarqueeText>Тримінг</MarqueeText>
           </MarqueeOverlay>
           <MarqueePicture>
             <source
@@ -225,7 +225,7 @@ export const HeroMarquee = ({ toggleModal }) => {
 
         <MarqueeChild id={4} onClick={handleToggleModal}>
           <MarqueeOverlay>
-            <MarqueeText>Перекладацьке бюро</MarqueeText>
+            <MarqueeText>Догляд за котами</MarqueeText>
           </MarqueeOverlay>
           <MarqueePicture>
             <source
@@ -257,7 +257,7 @@ export const HeroMarquee = ({ toggleModal }) => {
 
         <MarqueeChild id={5} onClick={handleToggleModal}>
           <MarqueeOverlay>
-            <MarqueeText>Екзаменаційний центр</MarqueeText>
+            <MarqueeText>Догляд за гризунами</MarqueeText>
           </MarqueeOverlay>
           <MarqueePicture>
             <source

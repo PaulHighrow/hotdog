@@ -15,13 +15,20 @@ import { MarqueeCloseBtn } from 'components/MarqueeModal/MarqueeModal.styled';
 import { Loader } from 'components/SharedLayout/Loader/Loader';
 import { Formik } from 'formik';
 import { useState } from 'react';
+import 'react-calendar/dist/Calendar.css';
+import 'react-date-picker/dist/DatePicker.css';
 import * as yup from 'yup';
-import { OrderModal, StyledSelect } from './TranslationsOrderModal.styled';
+import { StyledDatePicker } from './DatePickerMUI.styled';
+import {
+  OrderModal,
+  StyledSelect
+} from './TranslationsOrderModal.styled';
 
 export const TranslationsOrderModal = ({ closeOrderModal, utms }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const services = [
     { value: 'Комплексний догляд', label: 'Комплексний догляд' },
@@ -82,9 +89,9 @@ export const TranslationsOrderModal = ({ closeOrderModal, utms }) => {
       )
       .min(10, 'Номер телефону має складатися не менше ніж з 10 символів!')
       .max(20, 'Номер телефону має складатися не більше ніж з 20 символів!'),
-    service: yup.string().required('Будь ласка, оберіть послугу зі списку!'),
-    date: yup.string().required('Будь ласка, оберіть валідну дату!'),
-    time: yup.string().required('Будь ласка, оберіть час запису зі списку!'),
+    service: yup.string().optional('Будь ласка, оберіть послугу зі списку!'),
+    date: yup.string().optional('Будь ласка, оберіть валідну дату!'),
+    time: yup.string().optional('Будь ласка, оберіть час запису зі списку!'),
     utm_content: yup.string().optional(),
     utm_medium: yup.string().optional(),
     utm_campaign: yup.string().optional(),
@@ -98,7 +105,12 @@ export const TranslationsOrderModal = ({ closeOrderModal, utms }) => {
   });
 
   const handleSubmit = async (values, { resetForm }) => {
-    console.log('clicked');
+    const formattedDate = new Date(selectedDate)
+      .toLocaleString('uk-UA')
+      .split(',')[0];
+    values.date = formattedDate;
+    values.service = selectedService.value;
+    values.time = selectedTime.value;
     values.utm_content = utms.utm_content;
     values.utm_medium = utms.utm_medium;
     values.utm_campaign = utms.utm_campaign;
@@ -162,8 +174,12 @@ export const TranslationsOrderModal = ({ closeOrderModal, utms }) => {
               <InputNote component="p" name="service" />
             </Label>
             <Label>
-              <Input type="date" name="date" placeholder="Дата" />
-              <InputNote component="p" name="date" />
+              <StyledDatePicker
+                locale="uk-UA"
+                disablePast
+                placeholder="Дата"
+                onChange={setSelectedDate}
+              />
             </Label>
             <Label>
               <StyledSelect

@@ -142,17 +142,19 @@ export const Description = styled.p`
   text-align: center;
   font-size: 20px;
   color: var(--main-color);
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   padding: 0 30px;
 
   @media screen and (min-width: 768px) {
     font-size: 22px;
     padding: 0 40px;
+    margin-bottom: 12px;
   }
 
   @media screen and (min-width: 1280px) {
     padding: 0 55px;
     max-width: 60%;
+    margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
   }

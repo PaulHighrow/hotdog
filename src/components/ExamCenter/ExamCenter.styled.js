@@ -17,14 +17,18 @@ const pathAnimation = keyframes`
 `;
 
 export const ExamCenterBackground = styled(BackgroundWrapper)`
-  background-position: left -70px bottom 0px;
+  background-size: 150px, 0, 150px;
+  background-position: right -50px bottom 70px, center, right -50px top 100px;
 
-  @media screen and (min-width: 768px) {
-    background-position: right -140px top 70px;
+  @media screen and (min-width: 480px) {
+    background-size: 200px, 0, 200px;
+    background-position: right -65px bottom 60px, center, right -65px top 100px;
   }
 
   @media screen and (min-width: 1280px) {
-    background-position: right -215px top 70px;
+    background-size: 300px, 0, 300px;
+    background-position: right -100px bottom 150px, center,
+      right -100px top 120px;
   }
 `;
 
@@ -71,7 +75,7 @@ export const ExamCenterWrapper = styled.div`
 export const ExamCenterTitle = styled.h2`
   color: var(--main-color);
   font-family: var(--title-font-family);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 2px;
   -webkit-text-stroke: 1px var(--main-color);
@@ -79,7 +83,11 @@ export const ExamCenterTitle = styled.h2`
   max-width: 400px;
 
   @media screen and (min-width: 390px) {
-    font-size: 30px;
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 460px) {
+    font-size: 38px;
   }
 
   @media screen and (min-width: 768px) {
@@ -100,22 +108,26 @@ export const ExamCenterTitle = styled.h2`
 
 export const ExamCenterSubTitle = styled.span`
   font-family: var(--secondary-font-family);
-  font-size: 28px;
+  font-size: 24px;
   -webkit-text-stroke: 0;
   letter-spacing: 2px;
 
   color: var(--accent-color);
 
   @media screen and (min-width: 390px) {
-    font-size: 42px;
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 460px) {
+    font-size: 36px;
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 70px;
+    font-size: 51px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 100px;
+    font-size: 82px;
   }
 `;
 

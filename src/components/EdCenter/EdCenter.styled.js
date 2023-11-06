@@ -9,14 +9,17 @@ import { LeadBtn, wobblyOutline } from 'components/Menu/Menu.styled';
 import sketchOutlineSmall from 'img/svg/sketchOutlineSmall.svg';
 
 export const EdCenterBackground = styled(BackgroundWrapper)`
-  background-position: left -70px top 0;
+  background-size: 150px, 0, 0;
+  background-position: right -50px top 100px;
 
-  @media screen and (min-width: 768px) {
-    background-position: right -140px top;
+  @media screen and (min-width: 480px) {
+    background-size: 200px, 0, 0;
+    background-position: right -65px top 50px;
   }
 
   @media screen and (min-width: 1280px) {
-    background-position: right -185px top;
+    background-size: 300px, 0, 0;
+    background-position: right -100px top 120px;
   }
 `;
 
@@ -92,18 +95,22 @@ export const EdCenterTitle = styled.h2`
 
 export const EdCenterSubTitle = styled.span`
   font-family: var(--secondary-font-family);
-  font-size: 42px;
+  font-size: 34px;
   -webkit-text-stroke: 0;
   letter-spacing: 2px;
 
   color: var(--accent-color);
 
+  @media screen and (min-width: 360px) {
+    font-size: 40px;
+  }
+
   @media screen and (min-width: 768px) {
-    font-size: 70px;
+    font-size: 55px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 100px;
+    font-size: 70px;
   }
 `;
 
@@ -233,7 +240,7 @@ export const MoreBtnBox = styled.div`
   display: flex;
   gap: 25px;
   flex-direction: column;
-  
+
   margin-bottom: 21px;
 
   @media screen and (min-width: 768px) {

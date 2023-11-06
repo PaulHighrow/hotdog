@@ -58,18 +58,18 @@ export const SectionTitle = styled.h2`
 
 export const SectionSubTitle = styled.span`
   font-family: var(--secondary-font-family);
-  font-size: 42px;
+  font-size: 40px;
   -webkit-text-stroke: 0;
   letter-spacing: 2px;
 
   color: var(--accent-color);
 
   @media screen and (min-width: 768px) {
-    font-size: 70px;
+    font-size: 55px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 100px;
+    font-size: 70px;
   }
 `;
 

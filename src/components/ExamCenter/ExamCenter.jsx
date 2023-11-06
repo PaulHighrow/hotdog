@@ -8,7 +8,6 @@ import {
 } from 'components/HowItWorks/HowItWorks.styled';
 import { LeadBtn } from 'components/Menu/Menu.styled';
 import { useState } from 'react';
-import { useInView } from 'react-intersection-observer';
 import ReactPlayer from 'react-player/lazy';
 import {
   BottomPageNavigationText,
@@ -22,7 +21,6 @@ import {
   ExamTogglerUnderlineLong,
   ExamTogglerUnderlineMedium,
   ExamTogglerUnderlineShort,
-  LoopyLineIcon,
   NavAnimationWrapper,
   NavigationDesc,
   NavigationItem,
@@ -51,11 +49,6 @@ export const ExamCenter = ({ toggleModal }) => {
   ];
   // eslint-disable-next-line
   const [width, _] = useSize(document.body);
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    delay: 1000,
-  });
 
   const props =
     width < 768
@@ -115,7 +108,7 @@ export const ExamCenter = ({ toggleModal }) => {
               />
             </VideoBox>
           </VideoLimiter>
-          <NavAnimationWrapper ref={ref}>
+          <NavAnimationWrapper>
           {/* {inView && <LoopyLineMirroredIcon />} */}
             <NavigationWrapper>
               <NavigationDesc>... всі наші послуги</NavigationDesc>
@@ -133,7 +126,7 @@ export const ExamCenter = ({ toggleModal }) => {
                 ))}
               </PageNavigation>
             </NavigationWrapper>
-            {width > 480 && inView && <LoopyLineIcon />}
+            {/* {width > 480 && inView && <LoopyLineIcon />} */}
           </NavAnimationWrapper>
         </Box>
       </ExamCenterSection>

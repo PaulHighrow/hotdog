@@ -36,12 +36,22 @@ export const HeroTitle = styled(TitleSVG)`
   height: 80px;
   margin-bottom: 60px;
 
+  @media screen and (min-width: 420px) {
+    width: 400px;
+    height: auto;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 480px;
+  }
+
   @media screen and (min-width: 768px) {
-    width: 648px;
+    width: 548px;
   }
 
   @media screen and (min-width: 1280px) {
     width: 794px;
+    
   }
 `;
 

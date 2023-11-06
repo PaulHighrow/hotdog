@@ -197,7 +197,7 @@ export const LinkList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 160px;
+  max-width: 240px;
 `;
 
 export const LinkListItem = styled.li`

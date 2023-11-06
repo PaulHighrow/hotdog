@@ -12,14 +12,17 @@ import { LeadBtn, wobblyOutline } from 'components/Menu/Menu.styled';
 import sketchOutlineSmall from 'img/svg/sketchOutlineSmall.svg';
 
 export const TranslationsBackground = styled(BackgroundWrapper)`
-  background-position: right -70px top 70px;
+  background-size: 0, 175px, 0;
+  background-position: left -70px bottom 50px;
 
-  @media screen and (min-width: 768px) {
-    background-position: top center;
+  @media screen and (min-width: 480px) {
+    background-size: 0, 240px, 0;
+    background-position: left -65px bottom 50px;
   }
 
   @media screen and (min-width: 1280px) {
-    background-position: left -75px center;
+    background-size: 0, 360px, 0;
+    background-position: left -100px bottom 250px;
   }
 `;
 
@@ -96,18 +99,22 @@ export const TranslationsTitle = styled.h2`
 
 export const TranslationsSubTitle = styled.span`
   font-family: var(--secondary-font-family);
-  font-size: 42px;
+  font-size: 34px;
   -webkit-text-stroke: 0;
   letter-spacing: 2px;
 
   color: var(--accent-color);
 
+  @media screen and (min-width: 360px) {
+    font-size: 40px;
+  }
+
   @media screen and (min-width: 768px) {
-    font-size: 70px;
+    font-size: 55px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 100px;
+    font-size: 70px;
   }
 `;
 

@@ -2,14 +2,17 @@ import { BackgroundWrapper } from 'components/BackgroundWrapper/BackgroundWrappe
 import styled from 'styled-components';
 
 export const AboutUsBackground = styled(BackgroundWrapper)`
-  background-position: right -70px bottom 10px;
+  background-size: 0, 175px, 0;
+  background-position: center bottom -50px;
 
-  @media screen and (min-width: 768px) {
-    background-position: left -140px bottom -140px;
+  @media screen and (min-width: 480px) {
+    background-size: 0, 240px, 0;
+    background-position: center bottom -65px;
   }
 
   @media screen and (min-width: 1280px) {
-    background-position: center top;
+    background-size: 0, 350px, 0;
+    background-position: left 75% bottom -100px;
   }
 `;
 
@@ -69,18 +72,18 @@ export const AboutUsTitle = styled.h2`
 
 export const AboutUsSubTitle = styled.span`
   font-family: var(--secondary-font-family);
-  font-size: 42px;
+  font-size: 40px;
   -webkit-text-stroke: 0;
   letter-spacing: 2px;
 
   color: var(--accent-color);
 
   @media screen and (min-width: 768px) {
-    font-size: 53px;
+    font-size: 55px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 64px;
+    font-size: 70px;
   }
 `;
 

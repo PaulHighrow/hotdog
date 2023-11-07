@@ -1,6 +1,8 @@
 import { BackgroundWrapper } from 'components/BackgroundWrapper/BackgroundWrappers';
 import styled from 'styled-components';
 
+import pinkBone from '../../img/svg/pinkBone.svg';
+
 export const AboutUsBackground = styled(BackgroundWrapper)`
   background-size: 0, 175px, 0;
   background-position: center bottom -50px;
@@ -48,6 +50,7 @@ export const AboutUsWrapper = styled.div`
 `;
 
 export const AboutUsTitle = styled.h2`
+  position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
   font-size: 40px;
@@ -67,6 +70,14 @@ export const AboutUsTitle = styled.h2`
   @media screen and (min-width: 1280px) {
     font-size: 70px;
     margin-bottom: 40px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 64px;
+    content: url(${pinkBone});
   }
 `;
 

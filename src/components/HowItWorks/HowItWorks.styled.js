@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-scroll';
 import { ReactComponent as MenuArrow } from '../../img/svg/menu-arrow.svg';
 
+import blueBone from '../../img/svg/blueBone.svg';
+
 export const HowItWorksSection = styled.section`
   position: relative;
   padding: 30px;
@@ -35,6 +37,7 @@ export const SectionWrapper = styled.div`
 
 export const SectionTitle = styled.h2`
   width: 172px;
+  position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
   font-size: 40px;
@@ -53,6 +56,23 @@ export const SectionTitle = styled.h2`
 
   @media screen and (min-width: 1280px) {
     font-size: 70px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 31px;
+    height: 27px;
+    content: url(${blueBone});
+
+    @media screen and (min-width: 768px) {
+      top: -25px;
+      left: 55%;
+      transform: scaleX(-1);
+      width: 46px;
+      height: 40px;
+    }
   }
 `;
 
@@ -165,7 +185,7 @@ export const PageNavigationArrow = styled(MenuArrow)`
 `;
 
 export const PageNavigationText = styled.span`
-display: none;
+  display: none;
 
   @media screen and (min-width: 1280px) {
     display: inline;

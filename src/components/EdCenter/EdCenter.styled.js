@@ -7,6 +7,7 @@ import { ReactComponent as RotatedArrow } from '../../img/svg/menu-arrow-rotated
 import { LeadBtn, wobblyOutline } from 'components/Menu/Menu.styled';
 
 import sketchOutlineSmall from 'img/svg/sketchOutlineSmall.svg';
+import pinkBone from '../../img/svg/pinkBone.svg';
 
 export const EdCenterBackground = styled(BackgroundWrapper)`
   background-size: 150px, 0, 0;
@@ -64,6 +65,7 @@ export const EdCenterWrapper = styled.div`
 `;
 
 export const EdCenterTitle = styled.h2`
+position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
   font-size: 34px;
@@ -90,6 +92,14 @@ export const EdCenterTitle = styled.h2`
   @media screen and (min-width: 1280px) {
     width: 630px;
     font-size: 70px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -30px;
+    left: 5px;
+    width: 64px;
+    content: url(${pinkBone});
   }
 `;
 

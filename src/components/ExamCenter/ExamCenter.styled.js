@@ -7,6 +7,8 @@ import { ReactComponent as LoopyLine } from '../../img/svg/loopyLineNormal.svg';
 import { ReactComponent as LoopyLineMirrored } from '../../img/svg/loopyLineMirror.svg';
 import { PageNavigationText } from 'components/HowItWorks/HowItWorks.styled';
 
+import pinkBone from '../../img/svg/pinkBone.svg';
+
 const pathAnimation = keyframes`
   0%{
     stroke-dashoffset: 1;
@@ -73,6 +75,7 @@ export const ExamCenterWrapper = styled.div`
 `;
 
 export const ExamCenterTitle = styled.h2`
+position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
   font-size: 24px;
@@ -103,6 +106,14 @@ export const ExamCenterTitle = styled.h2`
   @media screen and (min-width: 1280px) {
     max-width: 871px;
     font-size: 82px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 64px;
+    content: url(${pinkBone});
   }
 `;
 

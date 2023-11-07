@@ -1,4 +1,6 @@
 import {
+  BackBtn,
+  ForwardBtn,
   MarqueeChild,
   MarqueeImg,
   MarqueeOverlay,
@@ -71,6 +73,43 @@ export const HeroMarquee = ({ toggleModal }) => {
       : (document.body.style.overflowY = '');
   };
 
+  const handleBackClick = e => {
+    const marqueeElements = [
+      document.querySelector('.initial-child-container'),
+      ...document.querySelectorAll('.marquee'),
+      ...document.querySelectorAll('.child'),
+    ];
+    console.log(marqueeElements);
+    marqueeElements.forEach(element => {
+      element.style.transition = 'all 250ms linear';
+      const transformPx = element.style.transform?.match(/-?[0-9]/g)?.join('');
+      if (!transformPx) {
+        element.style.transform = 'translateX(300px)';
+      } else {
+        element.style.transform = `translateX(${+transformPx + 300}px)`;
+      }
+    });
+  };
+
+  const handleForwardClick = e => {
+console.log();
+
+    const marqueeElements = [
+      document.querySelector('.initial-child-container'),
+      ...document.querySelectorAll('.marquee'),
+      ...document.querySelectorAll('.child'),
+    ];
+    marqueeElements.forEach(element => {
+      element.style.transition = 'all 250ms linear';
+      const transformPx = element.style.transform?.match(/-?[0-9]/g)?.join('');
+      if (!transformPx) {
+        element.style.transform = 'translateX(-300px)';
+      } else {
+        element.style.transform = `translateX(${+transformPx - 300}px)`;
+      }
+    });
+  };
+
   useEffect(() => {
     const onEscapeClose = event => {
       if (event.code === 'Escape' && isMarqueeModalOpen) {
@@ -94,7 +133,7 @@ export const HeroMarquee = ({ toggleModal }) => {
           id={modalId}
         />
       )}
-      <StyledMarquee autoFill={true} pauseOnHover={true}>
+      <StyledMarquee autoFill={true} pauseOnHover={true} onCycleComplete={() => console.log('loopd')}>
         <MarqueeChild id={0} onClick={handleToggleModal}>
           <MarqueeOverlay>
             <MarqueeText>Комплексний догляд</MarqueeText>
@@ -287,6 +326,8 @@ export const HeroMarquee = ({ toggleModal }) => {
           </MarqueePicture>
         </MarqueeChild>
       </StyledMarquee>
+      <BackBtn onClick={handleBackClick}>Back</BackBtn>
+      <ForwardBtn onClick={handleForwardClick}>Forward</ForwardBtn>
     </>
   );
 };

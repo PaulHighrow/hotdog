@@ -60,3 +60,6 @@ export const MarqueeText = styled.span`
     transform: scale(1.5) translate(-33%, -33%);
   }
 `;
+
+export const BackBtn = styled.button``;
+export const ForwardBtn = styled.button``;

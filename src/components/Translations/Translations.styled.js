@@ -10,6 +10,7 @@ import {
 import { LeadBtn, wobblyOutline } from 'components/Menu/Menu.styled';
 
 import sketchOutlineSmall from 'img/svg/sketchOutlineSmall.svg';
+import pinkBone from '../../img/svg/pinkBone.svg';
 
 export const TranslationsBackground = styled(BackgroundWrapper)`
   background-size: 0, 175px, 0;
@@ -66,6 +67,7 @@ export const TranslationsWrapper = styled.div`
 `;
 
 export const TranslationsTitle = styled.h2`
+position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
   font-size: 34px;
@@ -94,6 +96,14 @@ export const TranslationsTitle = styled.h2`
     width: 630px;
     font-size: 70px;
     margin-bottom: 80px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 64px;
+    content: url(${pinkBone});
   }
 `;
 

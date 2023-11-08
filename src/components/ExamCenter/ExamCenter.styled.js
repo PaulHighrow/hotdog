@@ -7,6 +7,7 @@ import { ReactComponent as LoopyLine } from '../../img/svg/loopyLineNormal.svg';
 import { ReactComponent as LoopyLineMirrored } from '../../img/svg/loopyLineMirror.svg';
 import { PageNavigationText } from 'components/HowItWorks/HowItWorks.styled';
 
+import blueBone from '../../img/svg/blueBone.svg';
 import pinkBone from '../../img/svg/pinkBone.svg';
 
 const pathAnimation = keyframes`
@@ -75,7 +76,7 @@ export const ExamCenterWrapper = styled.div`
 `;
 
 export const ExamCenterTitle = styled.h2`
-position: relative;
+  position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
   font-size: 24px;
@@ -110,10 +111,25 @@ position: relative;
 
   &::before {
     position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 64px;
-    content: url(${pinkBone});
+    top: -18px;
+    left: -18px;
+    width: 32px;
+    height: 29px;
+    content: url(${blueBone});
+
+    @media screen and (min-width: 768px) {
+      top: -30px;
+      left: -10px;
+      width: 48px;
+      width: 44px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: -45px;
+      left: -14px;
+      width: 64px;
+      height: 58px;
+    }
   }
 `;
 
@@ -253,6 +269,7 @@ export const NavigationWrapper = styled.div`
 `;
 
 export const NavigationDesc = styled.p`
+position: relative;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 16px;
@@ -267,6 +284,29 @@ export const NavigationDesc = styled.p`
   @media screen and (min-width: 1280px) {
     font-size: 36px;
     margin-bottom: 22px;
+  }
+
+  &::after {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 32px;
+    height: 29px;
+    content: url(${pinkBone});
+
+    @media screen and (min-width: 768px) {
+      top: -30px;
+      left: -10px;
+      width: 48px;
+      width: 44px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: -45px;
+      left: -14px;
+      width: 64px;
+      height: 58px;
+    }
   }
 `;
 

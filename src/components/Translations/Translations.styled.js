@@ -10,7 +10,7 @@ import {
 import { LeadBtn, wobblyOutline } from 'components/Menu/Menu.styled';
 
 import sketchOutlineSmall from 'img/svg/sketchOutlineSmall.svg';
-import pinkBone from '../../img/svg/pinkBone.svg';
+import greenBone from '../../img/svg/greenBone.svg';
 
 export const TranslationsBackground = styled(BackgroundWrapper)`
   background-size: 0, 175px, 0;
@@ -87,7 +87,7 @@ position: relative;
     margin: 0 auto;
     letter-spacing: 3.5px;
     margin-bottom: 52px;
-    width: 415px;
+    width: 400px;
     font-size: 55px;
     -webkit-text-stroke: 2px var(--main-color);
   }
@@ -100,10 +100,25 @@ position: relative;
 
   &::before {
     position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 64px;
-    content: url(${pinkBone});
+    top: -18px;
+    left: -18px;
+    width: 32px;
+    height: 32px;
+    content: url(${greenBone});
+
+    @media screen and (min-width: 768px) {
+      top: -27px;
+      left: 75px;
+      width: 48px;
+      height: 48px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: -36px;
+      left: 150px;
+      width: 64px;
+      height: 64px;
+    }
   }
 `;
 

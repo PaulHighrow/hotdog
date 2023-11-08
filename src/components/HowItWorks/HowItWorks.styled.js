@@ -36,7 +36,7 @@ export const SectionWrapper = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-  width: 172px;
+  width: 186px;
   position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
@@ -49,29 +49,38 @@ export const SectionTitle = styled.h2`
   @media screen and (min-width: 768px) {
     margin: 0;
     letter-spacing: 3.5px;
-    width: 400px;
+    width: 252px;
     font-size: 55px;
     -webkit-text-stroke: 2px var(--main-color);
   }
 
   @media screen and (min-width: 1280px) {
+    width: 316px;
     font-size: 70px;
   }
 
-  &::before {
+  &::after {
     position: absolute;
-    top: -18px;
-    left: -18px;
+    bottom: -4px;
+    right: -8px;
     width: 31px;
     height: 27px;
     content: url(${blueBone});
 
     @media screen and (min-width: 768px) {
-      top: -25px;
-      left: 55%;
-      transform: scaleX(-1);
+      bottom: -8px;
+      right: -16px;
+      /* transform: scaleX(-1); */
       width: 46px;
       height: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      bottom: -16px;
+      right: -32px;
+      /* transform: scaleX(-1); */
+      width: 62px;
+      height: 55px;
     }
   }
 `;

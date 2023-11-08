@@ -65,7 +65,7 @@ export const EdCenterWrapper = styled.div`
 `;
 
 export const EdCenterTitle = styled.h2`
-position: relative;
+  position: relative;
   color: var(--main-color);
   font-family: var(--title-font-family);
   font-size: 34px;
@@ -90,16 +90,31 @@ position: relative;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 630px;
+    width: 560px;
     font-size: 70px;
   }
 
   &::before {
     position: absolute;
-    top: -30px;
-    left: 5px;
-    width: 64px;
+    top: -18px;
+    left: -18px;
+    width: 32px;
+    height: 29px;
     content: url(${pinkBone});
+
+    @media screen and (min-width: 768px) {
+      top: -27px;
+      left: -27px;
+      width: 48px;
+      width: 44px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: -36px;
+      left: -36px;
+      width: 64px;
+      height: 58px;
+    }
   }
 `;
 

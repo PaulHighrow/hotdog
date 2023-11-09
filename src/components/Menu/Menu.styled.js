@@ -155,7 +155,7 @@ export const LeadBtn = styled.button`
   border: none;
   /* border: 2px solid #fff; */
   border-radius: 47px;
-  font-family: var(--title-font-family);
+  font-family: var(--secondary-font-family);
   background-color: var(--secondary-color);
   color: var(--accent-color);
   text-align: center;

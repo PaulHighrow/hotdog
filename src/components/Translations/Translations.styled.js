@@ -145,22 +145,21 @@ export const TranslationsSubTitle = styled.span`
 
 export const TranslationsNavigation = styled.ul`
   color: var(--main-color);
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   max-width: 350px;
-  letter-spacing: 1.8px;
   display: flex;
   flex-direction: column;
   gap: 9px;
 
   @media screen and (min-width: 768px) {
-    font-size: 32px;
+    font-size: 28px;
     gap: 10px;
     margin: 0;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 36px;
+    font-size: 32px;
   }
 `;
 

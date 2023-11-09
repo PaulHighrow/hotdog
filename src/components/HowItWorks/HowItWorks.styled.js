@@ -103,20 +103,20 @@ export const SectionSubTitle = styled.span`
 `;
 
 export const PageNavigation = styled.ul`
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: 1.8px;
+
   display: flex;
   flex-direction: column;
   gap: 9px;
 
   @media screen and (min-width: 768px) {
-    font-size: 32px;
+    font-size: 24px;
     gap: 10px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 36px;
+    font-size: 28px;
   }
 `;
 

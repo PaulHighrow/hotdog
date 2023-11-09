@@ -19,9 +19,8 @@ import {
   LinkList,
   LinkListItem,
   LinkListTitle,
+  PhoneBtn,
   SocialLogoLink,
-  TikTokBtn,
-  YouTubeBtn,
 } from './MainFooter.styled';
 import { Map } from './Map/Map';
 
@@ -31,7 +30,6 @@ export const MainFooter = ({ toggleModal }) => {
     { to: '/examination', service: 'Екзаменаційний центр' },
     { to: '/translation', service: 'Перекладацьке бюро' },
     // { to: 'admission', service: 'Вступ до ВНЗ' },
-    
   ];
   const footerCoursesItems = [
     { to: '/english', course: 'Англійська мова' },
@@ -58,6 +56,12 @@ export const MainFooter = ({ toggleModal }) => {
               </FooterLogoLink>
               <FooterSocials>
                 <SocialLogoLink
+                  href="tel:+380671047700"
+                  rel="noopener noreferrer"
+                >
+                  <PhoneBtn />
+                </SocialLogoLink>
+                <SocialLogoLink
                   href="https://www.instagram.com/ap.education/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,20 +74,6 @@ export const MainFooter = ({ toggleModal }) => {
                   rel="noopener noreferrer"
                 >
                   <FacebookBtn />
-                </SocialLogoLink>
-                <SocialLogoLink
-                  href="https://www.tiktok.com/@ap_education"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <TikTokBtn />
-                </SocialLogoLink>
-                <SocialLogoLink
-                  href="https://www.youtube.com/channel/UC3XSGAVLhPXXlMN5-Gebtvw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <YouTubeBtn />
                 </SocialLogoLink>
               </FooterSocials>
             </IconBox>
@@ -98,9 +88,7 @@ export const MainFooter = ({ toggleModal }) => {
               <LinkList>
                 {footerServicesItems.map((item, i) => (
                   <LinkListItem key={i}>
-                    <FooterNavLink to={item.to}>
-                      {item.service}
-                    </FooterNavLink>
+                    <FooterNavLink to={item.to}>{item.service}</FooterNavLink>
                   </LinkListItem>
                 ))}
               </LinkList>

@@ -5,8 +5,7 @@ import { PiMapPinDuotone } from 'react-icons/pi';
 import { Link, NavLink } from 'react-router-dom';
 import { ReactComponent as FacebookIcon } from '../../img/svg/social-links/facebook.svg';
 import { ReactComponent as InstagramIcon } from '../../img/svg/social-links/instagram.svg';
-import { ReactComponent as TikTokIcon } from '../../img/svg/social-links/tiktok.svg';
-import { ReactComponent as YouTubeIcon } from '../../img/svg/social-links/youtube.svg';
+import { ReactComponent as PhoneIcon } from '../../img/svg/social-links/phone.svg';
 
 export const Footer = styled.footer`
   background-color: var(--secondary-color);
@@ -74,7 +73,7 @@ export const FooterLogo = styled(Logo)`
 export const FooterSocials = styled.div`
   display: flex;
   width: max-content;
-  gap: 25px;
+  gap: 12px;
   margin: 0 auto;
   margin-bottom: 36px;
   align-items: center;
@@ -88,7 +87,7 @@ const socialBtnStyles =
   'fill: var(--accent-color); width: 40px; height: 40px; transition: fill var(--animation-global), transform var(--animation-global), filter var(--animation-global); ';
 
 const socialBtnStylesOnHover =
-  'fill: var(--main-color);  transform: scale(1.2);  filter: drop-shadow(0px 0px 0.5px #00000054);';
+  'fill: var(--main-color); transform: scale(1.2);  filter: drop-shadow(0px 0px 0.5px #00000054);';
 
 export const InstagramBtn = styled(InstagramIcon)`
   ${socialBtnStyles}
@@ -106,19 +105,17 @@ export const FacebookBtn = styled(FacebookIcon)`
   }
 `;
 
-export const TikTokBtn = styled(TikTokIcon)`
+export const PhoneBtn = styled(PhoneIcon)`
   ${socialBtnStyles}
+  width: 36px;
+  height: 36px;
+  stroke: var(--accent-color);
+  fill: none;
 
   ${SocialLogoLink}:hover & {
     ${socialBtnStylesOnHover}
-  }
-`;
-
-export const YouTubeBtn = styled(YouTubeIcon)`
-  ${socialBtnStyles}
-
-  ${SocialLogoLink}:hover & {
-    ${socialBtnStylesOnHover}
+    fill: none;
+    stroke: var(--main-color);
   }
 `;
 
@@ -145,7 +142,6 @@ export const LeadDesc = styled.p`
   font-weight: 500;
   text-align: center;
   color: var(--main-color);
-  letter-spacing: 1.8px;
 
   @media screen and (min-width: 768px) {
     font-weight: 600;
@@ -196,13 +192,13 @@ export const LinkListTitle = styled.h4`
 export const LinkList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   max-width: 240px;
 `;
 
 export const LinkListItem = styled.li`
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   -webkit-text-stroke: 0.2px var(--main-color);
 
   @media screen and (min-width: 768px) {

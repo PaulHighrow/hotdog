@@ -269,20 +269,19 @@ export const NavigationWrapper = styled.div`
 `;
 
 export const NavigationDesc = styled.p`
-position: relative;
-  font-size: 20px;
+  position: relative;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--main-color);
-  letter-spacing: 1.8px;
 
   @media screen and (min-width: 768px) {
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 19px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 36px;
+    font-size: 26px;
     margin-bottom: 22px;
   }
 
@@ -295,15 +294,15 @@ position: relative;
     content: url(${pinkBone});
 
     @media screen and (min-width: 768px) {
-      top: -30px;
-      left: -10px;
+      top: -25px;
+      left: -25px;
       width: 48px;
       width: 44px;
     }
 
     @media screen and (min-width: 1280px) {
-      top: -45px;
-      left: -14px;
+      top: -30px;
+      left: -30px;
       width: 64px;
       height: 58px;
     }

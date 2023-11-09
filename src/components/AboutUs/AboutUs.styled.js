@@ -1,7 +1,7 @@
 import { BackgroundWrapper } from 'components/BackgroundWrapper/BackgroundWrappers';
 import styled from 'styled-components';
 
-import pinkBone from '../../img/svg/pinkBone.svg';
+import blueBone from '../../img/svg/blueBone.svg';
 
 export const AboutUsBackground = styled(BackgroundWrapper)`
   background-size: 0, 175px, 0;
@@ -57,8 +57,10 @@ export const AboutUsTitle = styled.h2`
   letter-spacing: 2px;
   -webkit-text-stroke: 1px var(--main-color);
   margin-bottom: 18px;
+  width: 200px;
 
   @media screen and (min-width: 768px) {
+    width: 300px;
     text-align: center;
     letter-spacing: 3.5px;
     margin: 0 auto;
@@ -68,16 +70,32 @@ export const AboutUsTitle = styled.h2`
   }
 
   @media screen and (min-width: 1280px) {
+    width: 400px;
     font-size: 70px;
     margin-bottom: 40px;
   }
 
-  &::before {
+  &::after {
     position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 64px;
-    content: url(${pinkBone});
+    bottom: -4px;
+    right: -14px;
+    width: 32px;
+    height: 29px;
+    content: url(${blueBone});
+
+    @media screen and (min-width: 768px) {
+      bottom: 4px;
+      right: -14px;
+      width: 48px;
+      width: 44px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      bottom: -14px;
+      right: -8px;
+      width: 64px;
+      height: 58px;
+    }
   }
 `;
 
@@ -124,13 +142,13 @@ export const VideoBox = styled.div`
 export const AboutUsText = styled.p`
   max-width: 580px;
   color: var(--main-color);
-  font-size: 20px;
+  font-size: 16px;
 
   @media screen and (min-width: 768px) {
-    font-size: 29px;
+    font-size: 24px;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 38px;
+    font-size: 32px;
   }
 `;

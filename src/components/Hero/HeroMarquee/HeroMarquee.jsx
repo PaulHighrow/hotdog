@@ -92,13 +92,12 @@ export const HeroMarquee = ({ toggleModal }) => {
   };
 
   const handleForwardClick = e => {
-console.log();
-
     const marqueeElements = [
       document.querySelector('.initial-child-container'),
       ...document.querySelectorAll('.marquee'),
       ...document.querySelectorAll('.child'),
     ];
+    console.log(marqueeElements);
     marqueeElements.forEach(element => {
       element.style.transition = 'all 250ms linear';
       const transformPx = element.style.transform?.match(/-?[0-9]/g)?.join('');

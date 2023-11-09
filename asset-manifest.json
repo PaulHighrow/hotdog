@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/hotdog/static/css/main.eec21606.css",
-    "main.js": "/hotdog/static/js/main.9f6ee34c.js",
+    "main.js": "/hotdog/static/js/main.8046834d.js",
     "Homepage.css": "/hotdog/static/css/Homepage.1f7b6236.chunk.css",
-    "Homepage.js": "/hotdog/static/js/Homepage.94df646d.chunk.js",
+    "Homepage.js": "/hotdog/static/js/Homepage.90419f29.chunk.js",
     "Not Found.js": "/hotdog/static/js/Not Found.7b789c0e.chunk.js",
     "reactPlayerYouTube.js": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js",
     "reactPlayerSoundCloud.js": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js",
@@ -154,11 +154,10 @@
     "static/media/sketchOutlineSmall.svg": "/hotdog/static/media/sketchOutlineSmall.bd34163d1f274c054cc20c1a25ee1027.svg",
     "static/media/sketchOutline.svg": "/hotdog/static/media/sketchOutline.fe14ba3b7a9b7aceb3a70ea5e4d412a5.svg",
     "static/media/shopIcon.svg": "/hotdog/static/media/shopIcon.f16f2222c7ed370f30fc9d35a0b9d012.svg",
-    "static/media/instagram.svg": "/hotdog/static/media/instagram.b9daf875938ed610101b860a8d9931ea.svg",
-    "static/media/youtube.svg": "/hotdog/static/media/youtube.7c0e9b63551b95de8f58fd34bd9d86e3.svg",
-    "static/media/facebook.svg": "/hotdog/static/media/facebook.c1f8cad764fca7b64ee97522a571dee7.svg",
+    "static/media/instagram.svg": "/hotdog/static/media/instagram.998e94ab4bafc79573c1d0457635754e.svg",
     "index.html": "/hotdog/index.html",
-    "static/media/tiktok.svg": "/hotdog/static/media/tiktok.d562cd64774490264b88b3740b43d307.svg",
+    "static/media/phone.svg": "/hotdog/static/media/phone.237fddfb4f5c7e1f319102028db38066.svg",
+    "static/media/facebook.svg": "/hotdog/static/media/facebook.3f1ad4d1c3a7a556267bb52c63d6f0b1.svg",
     "static/media/menu-arrow.svg": "/hotdog/static/media/menu-arrow.56a53f1cd106c1e8953085e012887b16.svg",
     "static/media/menu-arrow-rotated.svg": "/hotdog/static/media/menu-arrow-rotated.4eded94223efb5e99ab1efd7a5dbdaf4.svg",
     "static/media/exam-underline-medium.svg": "/hotdog/static/media/exam-underline-medium.c31427019bb2f687b913ae90bd50213b.svg",
@@ -172,9 +171,9 @@
     "static/media/loopyLineMirror.svg": "/hotdog/static/media/loopyLineMirror.48ca7bb812c4829298a091b339e31743.svg",
     "static/media/downArrow.svg": "/hotdog/static/media/downArrow.739ad7a445679188e39aa43656b55580.svg",
     "main.eec21606.css.map": "/hotdog/static/css/main.eec21606.css.map",
-    "main.9f6ee34c.js.map": "/hotdog/static/js/main.9f6ee34c.js.map",
+    "main.8046834d.js.map": "/hotdog/static/js/main.8046834d.js.map",
     "Homepage.1f7b6236.chunk.css.map": "/hotdog/static/css/Homepage.1f7b6236.chunk.css.map",
-    "Homepage.94df646d.chunk.js.map": "/hotdog/static/js/Homepage.94df646d.chunk.js.map",
+    "Homepage.90419f29.chunk.js.map": "/hotdog/static/js/Homepage.90419f29.chunk.js.map",
     "Not Found.7b789c0e.chunk.js.map": "/hotdog/static/js/Not Found.7b789c0e.chunk.js.map",
     "reactPlayerYouTube.831a5c80.chunk.js.map": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js.map",
     "reactPlayerSoundCloud.084f48c9.chunk.js.map": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js.map",
@@ -193,6 +192,6 @@
   },
   "entrypoints": [
     "static/css/main.eec21606.css",
-    "static/js/main.9f6ee34c.js"
+    "static/js/main.8046834d.js"
   ]
 }

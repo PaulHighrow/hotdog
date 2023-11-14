@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-scroll';
 import { ReactComponent as MenuArrow } from '../../img/svg/menu-arrow.svg';
-
+import { ReactComponent as MenuPaws } from '../../img/svg/pawsSteps.svg';
 import blueBone from '../../img/svg/blueBone.svg';
 
 export const HowItWorksSection = styled.section`
@@ -130,6 +130,36 @@ export const arrowAnimation = keyframes`
   }
 `;
 
+export const pawsAnimation = keyframes`
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const PageNavigationPaws = styled(MenuPaws)`
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: -15px;
+  width: 60px;
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    bottom: 0px;
+    right: -56px;
+    width: 80px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: -5px;
+    right: -125px;
+    width: 120px;
+  }
+`;
+
 export const PageNavigationItem = styled.li`
   z-index: 1;
 `;
@@ -160,13 +190,73 @@ export const PageNavigationLink = styled(Link)`
     transition: opacity var(--animation-global) 250ms;
   }
 
-  &:hover > svg,
-  &:focus > svg {
+  &:hover svg,
+  &:focus svg {
     opacity: 1;
-    animation-name: ${arrowAnimation};
-    animation-duration: 400ms;
+    animation-name: ${pawsAnimation};
+  }
+
+  &:hover .paw-1,
+  &:focus .paw-1 {
+    animation-name: ${pawsAnimation};
+    animation-duration: 200ms;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+  }
+  &:hover .paw-2,
+  &:focus .paw-2 {
+    animation-name: ${pawsAnimation};
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 175ms;
+    animation-fill-mode: backwards;
+  }
+  &:hover .paw-3,
+  &:focus .paw-3 {
+    animation-name: ${pawsAnimation};
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 350ms;
+    animation-fill-mode: backwards;
+  }
+  &:hover .paw-4,
+  &:focus .paw-4 {
+    animation-name: ${pawsAnimation};
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 525ms;
+    animation-fill-mode: backwards;
+  }
+  &:hover .paw-5,
+  &:focus .paw-5 {
+    animation-name: ${pawsAnimation};
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 700ms;
+    animation-fill-mode: backwards;
+  }
+  &:hover .paw-6,
+  &:focus .paw-6 {
+    animation-name: ${pawsAnimation};
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 875ms;
+    animation-fill-mode: backwards;
+  }
+  &:hover .paw-7,
+  &:focus .paw-7 {
+    animation-name: ${pawsAnimation};
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 1050ms;
+    animation-fill-mode: backwards;
   }
 `;
 
@@ -198,12 +288,13 @@ export const PageNavigationText = styled.span`
 
   @media screen and (min-width: 1280px) {
     display: inline;
-    color: var(--accent-color);
+    color: var(--main-color);
+    font-family: var(--secondary-font-family);
     opacity: 0;
     position: absolute;
-    top: 33%;
-    right: -95px;
-    font-size: 22px;
+    top: 18%;
+    right: -100px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: normal;
   }

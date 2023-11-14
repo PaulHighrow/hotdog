@@ -57,6 +57,8 @@ const {
 
 export const HeroMarquee = ({ toggleModal }) => {
   const [isMarqueeModalOpen, setIsMarqueeModalOpen] = useState(false);
+  const [isScrolledBackEnough, setIsScrolledBackEnough] = useState(false);
+  const [isScrolledForwardEnough, setIsScrolledForwardEnough] = useState(false);
   const [modalId, setmodalId] = useState(NaN);
 
   const handleToggleModal = e => {
@@ -74,15 +76,20 @@ export const HeroMarquee = ({ toggleModal }) => {
   };
 
   const handleBackClick = e => {
+    const marqueeEl = document.querySelector('.initial-child-container');
     const marqueeElements = [
-      document.querySelector('.initial-child-container'),
-      ...document.querySelectorAll('.marquee'),
-      ...document.querySelectorAll('.child'),
+      marqueeEl,
+      ...document.querySelectorAll('.marquee > .child'),
+      // ...document.querySelectorAll('.child'),
     ];
     console.log(marqueeElements);
     marqueeElements.forEach(element => {
       element.style.transition = 'all 250ms linear';
       const transformPx = element.style.transform?.match(/-?[0-9]/g)?.join('');
+      console.log(transformPx);
+      if (+transformPx === 0) {
+        setIsScrolledBackEnough(isScrolled => (isScrolled = true));
+      }
       if (!transformPx) {
         element.style.transform = 'translateX(300px)';
       } else {
@@ -92,15 +99,21 @@ export const HeroMarquee = ({ toggleModal }) => {
   };
 
   const handleForwardClick = e => {
+    const marqueeEl = document.querySelector('.initial-child-container');
+
     const marqueeElements = [
-      document.querySelector('.initial-child-container'),
-      ...document.querySelectorAll('.marquee'),
-      ...document.querySelectorAll('.child'),
+      marqueeEl,
+      ...document.querySelectorAll('.marquee > .child'),
+      // ...document.querySelectorAll('.child'),
     ];
     console.log(marqueeElements);
     marqueeElements.forEach(element => {
       element.style.transition = 'all 250ms linear';
-      const transformPx = element.style.transform?.match(/-?[0-9]/g)?.join('');
+      let transformPx = element.style.transform?.match(/-?[0-9]/g)?.join('');
+      console.log(transformPx);
+      if (+transformPx < 0) {
+        setIsScrolledBackEnough(isScrolled => (isScrolled = true));
+      }
       if (!transformPx) {
         element.style.transform = 'translateX(-300px)';
       } else {
@@ -132,7 +145,11 @@ export const HeroMarquee = ({ toggleModal }) => {
           id={modalId}
         />
       )}
-      <StyledMarquee autoFill={true} pauseOnHover={true} onCycleComplete={() => console.log('loopd')}>
+      <StyledMarquee
+        autoFill={true}
+        pauseOnHover={true}
+        onCycleComplete={() => console.log('loopd')}
+      >
         <MarqueeChild id={0} onClick={handleToggleModal}>
           <MarqueeOverlay>
             <MarqueeText>Комплексний догляд</MarqueeText>

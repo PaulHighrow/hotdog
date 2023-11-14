@@ -5,6 +5,7 @@ import {
   PageNavigationArrow,
   PageNavigationItem,
   PageNavigationLink,
+  PageNavigationPaws,
   PageNavigationText,
   SectionSubTitle,
   SectionTitle,
@@ -42,7 +43,7 @@ export const HowItWorks = () => {
               <PageNavigationItem key={i}>
                 <PageNavigationLink to={item.to} {...props}>
                   {item.service}
-                  <PageNavigationArrow />
+                  <PageNavigationPaws />
                   <PageNavigationText>перейти</PageNavigationText>
                 </PageNavigationLink>
               </PageNavigationItem>

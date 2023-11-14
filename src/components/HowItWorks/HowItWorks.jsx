@@ -1,8 +1,9 @@
+import useSize from '@react-hook/size';
 import { Box } from 'components/Box/Box.styled';
+import ReactPlayer from 'react-player/lazy';
 import {
   HowItWorksSection,
   PageNavigation,
-  PageNavigationArrow,
   PageNavigationItem,
   PageNavigationLink,
   PageNavigationPaws,
@@ -11,10 +12,8 @@ import {
   SectionTitle,
   SectionWrapper,
   VideoBox,
-  VideoLimiter,
+  VideoLimiter
 } from './HowItWorks.styled';
-import ReactPlayer from 'react-player/lazy';
-import useSize from '@react-hook/size';
 
 export const HowItWorks = () => {
   const listItems = [

@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/hotdog/static/css/main.eec21606.css",
-    "main.js": "/hotdog/static/js/main.8046834d.js",
+    "main.js": "/hotdog/static/js/main.6f87024b.js",
     "Homepage.css": "/hotdog/static/css/Homepage.1f7b6236.chunk.css",
-    "Homepage.js": "/hotdog/static/js/Homepage.90419f29.chunk.js",
+    "Homepage.js": "/hotdog/static/js/Homepage.a484b54b.chunk.js",
     "Not Found.js": "/hotdog/static/js/Not Found.7b789c0e.chunk.js",
     "reactPlayerYouTube.js": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js",
     "reactPlayerSoundCloud.js": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js",
@@ -139,6 +139,7 @@
     "static/media/bluePaws.png": "/hotdog/static/media/bluePaws.733f1dab567e829705c1.png",
     "static/media/hero-marquee3large@1x.webp": "/hotdog/static/media/hero-marquee3large@1x.81a997f81f89d3f2a0ca.webp",
     "static/media/hero-marquee2large@1x.webp": "/hotdog/static/media/hero-marquee2large@1x.e28e1554f8959feda507.webp",
+    "static/media/pawsSteps.svg": "/hotdog/static/media/pawsSteps.40565d7b75d763633430066b58688bcb.svg",
     "static/media/hero-marquee5small@1x.webp": "/hotdog/static/media/hero-marquee5small@1x.403071424f62ce2e7173.webp",
     "static/media/hero-marquee1small@1x.webp": "/hotdog/static/media/hero-marquee1small@1x.70c8fe6a2c3fe9ee9dad.webp",
     "static/media/hero-marquee3small@1x.webp": "/hotdog/static/media/hero-marquee3small@1x.5912495db62111b534c8.webp",
@@ -171,9 +172,9 @@
     "static/media/loopyLineMirror.svg": "/hotdog/static/media/loopyLineMirror.48ca7bb812c4829298a091b339e31743.svg",
     "static/media/downArrow.svg": "/hotdog/static/media/downArrow.739ad7a445679188e39aa43656b55580.svg",
     "main.eec21606.css.map": "/hotdog/static/css/main.eec21606.css.map",
-    "main.8046834d.js.map": "/hotdog/static/js/main.8046834d.js.map",
+    "main.6f87024b.js.map": "/hotdog/static/js/main.6f87024b.js.map",
     "Homepage.1f7b6236.chunk.css.map": "/hotdog/static/css/Homepage.1f7b6236.chunk.css.map",
-    "Homepage.90419f29.chunk.js.map": "/hotdog/static/js/Homepage.90419f29.chunk.js.map",
+    "Homepage.a484b54b.chunk.js.map": "/hotdog/static/js/Homepage.a484b54b.chunk.js.map",
     "Not Found.7b789c0e.chunk.js.map": "/hotdog/static/js/Not Found.7b789c0e.chunk.js.map",
     "reactPlayerYouTube.831a5c80.chunk.js.map": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js.map",
     "reactPlayerSoundCloud.084f48c9.chunk.js.map": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js.map",
@@ -192,6 +193,6 @@
   },
   "entrypoints": [
     "static/css/main.eec21606.css",
-    "static/js/main.8046834d.js"
+    "static/js/main.6f87024b.js"
   ]
 }

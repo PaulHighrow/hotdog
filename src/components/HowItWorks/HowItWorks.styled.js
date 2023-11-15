@@ -187,7 +187,7 @@ export const PageNavigationLink = styled(Link)`
   &:hover > span,
   &:focus > span {
     opacity: 1;
-    transition: opacity var(--animation-global) 250ms;
+    transition: opacity var(--animation-global) 1100ms;
   }
 
   &:hover svg,

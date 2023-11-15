@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/hotdog/static/css/main.eec21606.css",
-    "main.js": "/hotdog/static/js/main.6f87024b.js",
+    "main.js": "/hotdog/static/js/main.733a6c98.js",
     "Homepage.css": "/hotdog/static/css/Homepage.1f7b6236.chunk.css",
-    "Homepage.js": "/hotdog/static/js/Homepage.a484b54b.chunk.js",
+    "Homepage.js": "/hotdog/static/js/Homepage.685ba9d3.chunk.js",
     "Not Found.js": "/hotdog/static/js/Not Found.7b789c0e.chunk.js",
     "reactPlayerYouTube.js": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js",
     "reactPlayerSoundCloud.js": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js",
@@ -172,9 +172,9 @@
     "static/media/loopyLineMirror.svg": "/hotdog/static/media/loopyLineMirror.48ca7bb812c4829298a091b339e31743.svg",
     "static/media/downArrow.svg": "/hotdog/static/media/downArrow.739ad7a445679188e39aa43656b55580.svg",
     "main.eec21606.css.map": "/hotdog/static/css/main.eec21606.css.map",
-    "main.6f87024b.js.map": "/hotdog/static/js/main.6f87024b.js.map",
+    "main.733a6c98.js.map": "/hotdog/static/js/main.733a6c98.js.map",
     "Homepage.1f7b6236.chunk.css.map": "/hotdog/static/css/Homepage.1f7b6236.chunk.css.map",
-    "Homepage.a484b54b.chunk.js.map": "/hotdog/static/js/Homepage.a484b54b.chunk.js.map",
+    "Homepage.685ba9d3.chunk.js.map": "/hotdog/static/js/Homepage.685ba9d3.chunk.js.map",
     "Not Found.7b789c0e.chunk.js.map": "/hotdog/static/js/Not Found.7b789c0e.chunk.js.map",
     "reactPlayerYouTube.831a5c80.chunk.js.map": "/hotdog/static/js/reactPlayerYouTube.831a5c80.chunk.js.map",
     "reactPlayerSoundCloud.084f48c9.chunk.js.map": "/hotdog/static/js/reactPlayerSoundCloud.084f48c9.chunk.js.map",
@@ -193,6 +193,6 @@
   },
   "entrypoints": [
     "static/css/main.eec21606.css",
-    "static/js/main.6f87024b.js"
+    "static/js/main.733a6c98.js"
   ]
 }
